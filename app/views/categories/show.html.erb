@@ -1,0 +1,10 @@
+<p>
+  <strong>Title:</strong>
+  <p>Name: <%= @category.name %></p>
+  <p>Brand:<%= @category.brand %></p>
+  <%= link_to 'edit', edit_category_path(@category) %> 
+   <%= link_to 'show', category_path(@category) %>
+    <%= link_to  'destroy', category_path(@category), method: :delete %>
+    <%= link_to 'Back', categories_path %>
+</p>
+ 

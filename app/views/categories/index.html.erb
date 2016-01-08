@@ -1,0 +1,14 @@
+ <% @categories.each do |category| %>
+ <table>
+    <tr>
+      <td><%= category.name %></td>
+      <td><%= category.brand %></td>
+    </tr>
+    <tr>
+    <td> <%= link_to 'edit', edit_category_path(category) %> </td>
+    <td> <%= link_to 'show', category_path(category) %> </td>
+    <td> <%= link_to 'destroy', category_path(category), method: :delete, data: {confirm:'Are you sure?'} %></td>
+    <td> <%= link_to 'New Category', new_category_path %></td>
+    </tr>
+ </table> 
+ <% end %>       
